@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>GenFun AIタイプ診断</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #ffe8f2 0, #f0f4ff 40%, #ffffff 100%);
+      color: #222;
+    }
+    .kv {
+      width: 1200px;
+      height: 630px;
+      margin: 0 auto;
+      padding: 28px 40px;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+    .title-block {
+      max-width: 70%;
+    }
+    .logo-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #fff1c7;
+      font-size: 11px;
+      color: #b26a00;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .logo-pill span {
+      margin-right: 4px;
+      font-size: 13px;
+    }
+    .title {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      color: #263179;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #555;
+    }
+    .badge-group {
+      text-align: right;
+      font-size: 12px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #4b5dff;
+      font-weight: 600;
+      margin-left: 6px;
+    }
+    .mini-note {
+      margin-top: 4px;
+      color: #777;
+      font-size: 11px;
+    }
+
+    .grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px 16px;
+    }
+    .card {
+      background: #ffffffee;
+      border-radius: 18px;
+      border: 1px solid #e0e4ff;
+      padding: 8px 10px;
+      box-shadow: 0 4px 10px rgba(88, 116, 255, 0.10);
+      display: flex;
+      flex-direction: column;
+    }
+    .img-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #f5f5ff;
+      margin-bottom: 6px;
+    }
+    .img-wrap img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 2px;
+      color: #34478c;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-tag {
+      font-size: 10px;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: #f3f4ff;
+      color: #6b70ff;
+    }
+    .card-desc {
+      font-size: 11px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .footer {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-main {
+      font-weight: 500;
+    }
+    .footer-sub {
+      font-size: 11px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="kv">
+    <!-- ヘッダー -->
+    <div class="header">
+      <div class="title-block">
+        <div class="logo-pill">
+          <span>✨</span> 社内AIコミュニティ GenFun
+        </div>
+        <div class="title">
+          GenFun AIタイプ診断
+        </div>
+        <div class="subtitle">
+          「AIとどう付き合っていきたいか」がわかる、社内限定のゆる診断コンテンツです。
+        </div>
+      </div>
+      <div class="badge-group">
+        <div>
+          <span class="badge">全8タイプ</span>
+          <span class="badge">所要時間 1〜2分</span>
+        </div>
+        <div class="mini-note">
+          アンケート回答後、診断結果メールが自動で届きます。
+        </div>
+      </div>
+    </div>
+
+    <!-- 8タイプのグリッド -->
+    <div class="grid">
+      <!-- 1: プロンプト錬金術師 -->
+      <div class="card">
+        <div class="img-wrap">
+          <img src="https://raw.githubusercontent.com/tomomomo0/genfun-assets/beecaa2ca5330c54804d72a0b1b9092029772ffb/20251119_2313_New%20Video_simple_compose_01kae7bwt5fgvan59d59y9baj9.gif" alt="プロンプト錬金術師">
+        </div>
+        <div class="card-title">
+          <span>プロンプト錬金術師</span>
+          <span class="card-tag">言葉で形に</span>
+        </div>
+        <div class="card-desc">
+          ことばで発想をカタチにするクリエイター気質。叩き台づくりとリライトで、AIの力を引き出すタイプです。
+        </div>
+      </div>
+
+      <!-- 2: オートメーション鍛冶師 -->
+      <div class="card">
+        <div class="img-wrap">
+          <img src="https://raw.githubusercontent.com/tomomomo0/genfun-assets/main/20251120_0032_New%20Video_simple_compose_01kaebxe9hfx7t60xc36m6raxq.gif" alt="オートメーション鍛冶師">
+        </div>
+        <div class="card-title">
+          <span>オートメーション鍛冶師</span>
+          <span class="card-tag">仕組み化</span>
+        </div>
+        <div class="card-desc">
+          面倒な作業を見つけると自動化したくなる実践派。ワークフロー設計でチームの時間を生み出します。
+        </div>
+      </div>
+
+      <!-- 3: リテラシー探求者 -->
+      <div class="card">
+        <div class="img-wrap">
+          <img src="https://raw.githubusercontent.com/tomomomo0/genfun-assets/main/20251120_0033_New%20Video_simple_compose_01kaebyzpzehdampx7e8xm97qp.gif" alt="リテラシー探求者">
+        </div>
+        <div class="card-title">
+          <span>リテラシー探求者</span>
+          <span class="card-tag">まずは理解</span>
+        </div>
+        <div class="card-desc">
+          仕組みやリスクをきちんと知ってから進みたい堅実タイプ。安心して使えるAI環境づくりに向いています。
+        </div>
+      </div>
+
+      <!-- 4: クリエイティブ錬成士 -->
+      <div class="card">
+        <div class="img-wrap">
+          <img src="https://raw.githubusercontent.com/tomomomo0/genfun-assets/main/20251120_0039_New%20Video_simple_compose_01kaecatdwfmb8p7xstv5x3hfr.gif" alt="クリエイティブ錬成士">
+        </div>
+        <div class="card-title">
+          <span>クリエイティブ錬成士</span>
+          <span class="card-tag">表現ひろがる</span>
+        </div>
+        <div class="card-desc">
+          画像・動画・音声など、表現の幅を広げることにワクワクするタイプ。つくりながら学ぶのが得意です。
+        </div>
+      </div>
+
+      <!-- 5: データ錬金術師 -->
+      <div class="card">
+        <div class="img-wrap">
+          <img src="https://raw.githubusercontent.com/tomomomo0/genfun-assets/main/20251120_0040_New%20Video_simple_compose_01kaecbs1zet0tkxs5m0r5wnmt.gif" alt="データ錬金術師">
+        </div>
+        <div class="card-title">
+          <span>データ錬金術師</span>
+          <span class="card-tag">数字から洞察</span>
+        </div>
+        <div class="card-desc">
+          数字やログから「なるほど」を見つけるのが好き。分析と可視化で意思決定をサポートしていくタイプです。
+        </div>
+      </div>
+
+      <!-- 6: システムアーキビスト -->
+      <div class="card">
+        <div class="img-wrap">
+          <img src="https://raw.githubusercontent.com/tomomomo0/genfun-assets/main/20251120_0052_New%20Video_simple_compose_01kaed1ge2f7ht7sskxr5jc3wa.gif" alt="システムアーキビスト">
+        </div>
+        <div class="card-title">
+          <span>システムアーキビスト</span>
+          <span class="card-tag">裏側すき</span>
+        </div>
+        <div class="card-desc">
+          RAGやコンテキスト設計など、AIの裏側の仕組みに惹かれる設計脳タイプ。土台づくりに強みがあります。
+        </div>
+      </div>
+
+      <!-- 7: コミュニティ・ナビゲーター -->
+      <div class="card">
+        <div class="img-wrap">
+          <img src="https://raw.githubusercontent.com/tomomomo0/genfun-assets/main/20251120_0049_New%20Video_simple_compose_01kaecwnzmen8tdr4e2gptmavk.gif" alt="コミュニティ・ナビゲーター">
+        </div>
+        <div class="card-title">
+          <span>コミュニティ・ナビゲーター</span>
+          <span class="card-tag">みんなで学ぶ</span>
+        </div>
+        <div class="card-desc">
+          気づきや学びをシェアするのが得意なつなぎ役。チームでAIを使いこなしていく雰囲気づくりに向いています。
+        </div>
+      </div>
+
+      <!-- 8: フューチャリスト -->
+      <div class="card">
+        <div class="img-wrap">
+          <img src="https://raw.githubusercontent.com/tomomomo0/genfun-assets/main/20251120_0056_New%20Video_simple_compose_01kaed95fzeyn9ggay1bpmzjzw.gif" alt="フューチャリスト">
+        </div>
+        <div class="card-title">
+          <span>フューチャリスト</span>
+          <span class="card-tag">未来志向</span>
+        </div>
+        <div class="card-desc">
+          AIで仕事や事業がどう変わるかに興味津々。未来の風景を描きながら、今やる一歩を考えていくタイプです。
+        </div>
+      </div>
+    </div>
+
+    <!-- フッター -->
+    <div class="footer">
+      <div class="footer-main">
+        社内アンケートに回答すると、あなたのGenFun AIタイプ診断メールが自動で届きます。
+      </div>
+      <div class="footer-sub">
+        ※Slackに投稿されるフォームURLからご参加ください。
+      </div>
+    </div>
+  </div>
+</body>
+</html>
